@@ -1,0 +1,9 @@
+services:
+  slack-scanner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      - SLACK_APP_TOKEN=${SLACK_APP_TOKEN}
+    restart: always
